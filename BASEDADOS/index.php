@@ -29,13 +29,13 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container ">
-          <h1><span>CESVEL</span> CONSULTORES</h1>
+          <h1><span>CESVEL</span> CONSULTORES </h1>
           <p class="lead">Inovação através da consultoria inteligente.</p>
         </div>
       </div>
 
       <div class="container">
-      <p class="h1"> Serviçios prestados</p> 
+      <p class="h1"> Serviçios </p> 
         <section class="cards-container">
 
           <div class="row">
