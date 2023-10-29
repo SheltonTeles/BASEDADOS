@@ -45,7 +45,7 @@
           ' . $id . ' 
         </th>
         <th>
-        <a href="/porVaga_Candidatos.php?vagaID='.$id.'">
+        <a href="../admin/porVaga_Candidatos.php?vagaID='.$id.'">
           ' . $nome_vaga . '<a/> 
         </th>
         <th>
