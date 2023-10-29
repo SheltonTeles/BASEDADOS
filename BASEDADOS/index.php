@@ -122,7 +122,7 @@
 
             <div class="mt-4">
 
-              <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Careiras</a>
+              <a href="../BASEDADOS/pages/home.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Careiras</a>
 
               <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Feedback</a>
 
