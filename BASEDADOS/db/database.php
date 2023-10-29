@@ -140,10 +140,11 @@ function candidatar($id_vaga){
         $result = mysqli_query($conn, $sql);
 
         $ultimo_candidato="SELECT id FROM candidato ORDER BY ID DESC LIMIT 1";
-        $ultimo_candidato=mysqli_query($conn, $sql);
-        $ultima_linha_candidato=mysqli_fetch_row($ultimo_candidato);
+        $ultimo_candidato=mysqli_query($conn, $ultimo_candidato);
+        $rows = mysqli_fetch_row($ultimo_candidato);
 
-        $vaga_candidato_sql="insert into `candidato_vaga` (id_candidato, id_vaga) values ('$ultima_linha_candidato[0]','$id_vaga')";
+        $vaga_candidato_sql="insert into `candidato_vaga` (id_candidato, id_vaga) values ('$rows[0]','$id_vaga')";
+        $gofill=mysqli_query($conn,$vaga_candidato_sql);
         if ($result) {
             header('location:../home.php');
         } else {
