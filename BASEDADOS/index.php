@@ -164,12 +164,12 @@
                   <td>8:00 - 21:00</td>
                 </tr>
                 <tr>
-                  <td>Fri - Sat:</td>
+                  <td>Sábado:</td>
                   <td>8:00 - 12:30</td>
                 </tr>
                 <tr>
-                  <td>Sunday:</td>
-                  <td>Closed</td>
+                  <td>Domingo:</td>
+                  <td>Fechado</td>
                 </tr>
               </tbody>
             </table>
