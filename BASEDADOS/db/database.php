@@ -102,7 +102,8 @@ function checkUser()
     }
 }
 
-function adicionarVaga(){
+function adicionarVaga()
+{
     global $conn;
     if (isset($_POST['submit'])) { //Se $_POST['submit'] significa que o formulário foi submetido
         $nome_vaga = $_POST['nomeVaga'];
@@ -123,7 +124,8 @@ function adicionarVaga(){
 //
 
 //---CANDIDATURA
-function candidatar($id_vaga){
+function candidatar($id_vaga)
+{
     global $conn;
     if (isset($_POST['submit'])) { //Se $_POST['submit'] significa que o formulário foi submetido
         $nome_candidato = $_POST['nome_candidato'];
@@ -139,11 +141,11 @@ function candidatar($id_vaga){
         $sql = "insert into `candidato`  (nome, data_nascimento, titulo, idade, email, telemovel, pais_residencia,nacionalidade,linked_in) values('$nome_candidato','$data_nascimento','$titulo','$idade','$email','$telemovel','$pais_residencia','$nacionalidade','$linkedIn')";
         $result = mysqli_query($conn, $sql);
 
-        $ultimo_candidato="SELECT id FROM candidato ORDER BY ID DESC LIMIT 1";
-        $ultimo_candidato=mysqli_query($conn, $ultimo_candidato);
+        $ultimo_candidato = "SELECT id FROM candidato ORDER BY ID DESC LIMIT 1";
+        $ultimo_candidato = mysqli_query($conn, $ultimo_candidato);
         $rows = mysqli_fetch_row($ultimo_candidato);
-        $vaga_candidato_sql="insert into `candidato_vaga` (id_candidato, id_vaga) values ('$rows[0]','$id_vaga')";
-        $gofill=mysqli_query($conn,$vaga_candidato_sql);
+        $vaga_candidato_sql = "insert into `candidato_vaga` (id_candidato, id_vaga) values ('$rows[0]','$id_vaga')";
+        $gofill = mysqli_query($conn, $vaga_candidato_sql);
         if ($result) {
             header('location:../candidatura/formacao_academica.php?candidatoID=' . $rows[0] . '');
         } else {
@@ -151,35 +153,38 @@ function candidatar($id_vaga){
         }
     }
 }
-function formacao($id_candidato){
-        global $conn;
-        if (isset($_POST['submit'])) { //Se $_POST['submit'] significa que o formulário foi submetido
-            $nome_instituicao = $_POST['nome_instituicao'];
-            $nivel_academico = $_POST['nivel_academico'];
-            $data_inicio = $_POST['data_inicio'];
-            $data_termino = $_POST['data_termino'];
-            $sql = "insert into `formacao_academica`  (id_candidato,nome_instituicao ,nivel_academico, data_inicio, data_termino) values('$id_candidato','$nome_instituicao','$nivel_academico','$data_inicio','$data_termino')";
-            $result = mysqli_query($conn, $sql);
-            if ($result) {
-                header('location:../candidatura/historico_profissional.php?candidatoID=' . $id_candidato . '');
-            } else {
-                die(mysqli_error($conn));
-            }
+function formacao($id_candidato)
+{
+    global $conn;
+    if (isset($_POST['submit'])) { //Se $_POST['submit'] significa que o formulário foi submetido
+        $nome_instituicao = $_POST['nome_instituicao'];
+        $nivel_academico = $_POST['nivel_academico'];
+        $data_inicio = $_POST['data_inicio'];
+        $data_termino = $_POST['data_termino'];
+        $sql = "insert into `formacao_academica`  (id_candidato,nome_instituicao ,nivel_academico, data_inicio, data_termino) values('$id_candidato','$nome_instituicao','$nivel_academico','$data_inicio','$data_termino')";
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
+            header('location:../candidatura/historico_profissional.php?candidatoID=' . $id_candidato . '');
+        } else {
+            die(mysqli_error($conn));
         }
-        if (isset($_POST['adicionar'])) { //Se $_POST['submit'] significa que o formulário foi submetido
-            $nome_instituicao = $_POST['nome_instituicao'];
-            $nivel_academico = $_POST['nivel_academico'];
-            $data_inicio = $_POST['data_inicio'];
-            $data_termino = $_POST['data_termino'];
-            $sql = "insert into `formacao_academica`  (id_candidato,nome_instituicao,nivel_academico , data_inicio, data_termino) values('$id_candidato','$nome_instituicao','$nivel_academico','$data_inicio','$data_termino')"; $result = mysqli_query($conn, $sql);
-            if ($result) {
-                header('location:../candidatura/formacao_academica.php?candidatoID=' . $id_candidato . '');
-            } else {
-                die(mysqli_error($conn));
-            }
+    }
+    if (isset($_POST['adicionar'])) { //Se $_POST['submit'] significa que o formulário foi submetido
+        $nome_instituicao = $_POST['nome_instituicao'];
+        $nivel_academico = $_POST['nivel_academico'];
+        $data_inicio = $_POST['data_inicio'];
+        $data_termino = $_POST['data_termino'];
+        $sql = "insert into `formacao_academica`  (id_candidato,nome_instituicao,nivel_academico , data_inicio, data_termino) values('$id_candidato','$nome_instituicao','$nivel_academico','$data_inicio','$data_termino')";
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
+            header('location:../candidatura/formacao_academica.php?candidatoID=' . $id_candidato . '');
+        } else {
+            die(mysqli_error($conn));
         }
+    }
 }
-function historico($id_candidato){
+function historico($id_candidato)
+{
     global $conn;
     if (isset($_POST['submit'])) { //Se $_POST['submit'] significa que o formulário foi submetido
         $nome_empresa = $_POST['nome_empresa'];
@@ -204,7 +209,8 @@ function historico($id_candidato){
         $data_inicio = $_POST['data_inicio'];
         $data_termino = $_POST['data_termino'];
         $sql = "insert into `historico_profissional`  (id_candidato,funcao ,nome_empresa, localidade, area, data_inicio,data_termino) values('$id_candidato','$funcao','$nome_empresa','$localidade','$area','$data_inicio','$data_termino')";
-        $result = mysqli_query($conn, $sql);if ($result) {
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
             header('location:../candidatura/historico_profissional.php?candidatoID=' . $id_candidato . '');
         } else {
             die(mysqli_error($conn));
@@ -212,7 +218,8 @@ function historico($id_candidato){
     }
 }
 
-function lingua($id_candidato){
+function lingua($id_candidato)
+{
     global $conn;
     if (isset($_POST['submit'])) { //Se $_POST['submit'] significa que o formulário foi submetido
         $nome_lingua = $_POST['nome_lingua'];
@@ -233,12 +240,39 @@ function lingua($id_candidato){
         $prof_ler = $_POST['prof_ler'];
         $prof_escrever = $_POST['prof_escrever'];
         $sql = "insert into `lingua_candidato`  (id_candidato,nome_lingua ,prof_falar, prof_ler, prof_escrever) values('$id_candidato','$nome_lingua','$prof_falar','$prof_ler','$prof_escrever')";
-          $result = mysqli_query($conn, $sql);
-          if ($result) {
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
             header('location:../candidatura/lingua_candidato.php?candidatoID=' . $id_candidato . '');
         } else {
             die(mysqli_error($conn));
         }
     }
 }
-?>
+
+// Pergunta
+
+function perguntas($id_pergunta)
+{
+    global $conn;
+    if (isset($_POST['submit'])) { //Se $_POST['submit'] significa que o formulário foi submetido
+        $pergunta = $_POST['pergunta'];
+
+        $sql = "insert into `perguntas`  (id_pergunta,pergunta) values('$id_pergunta','$pergunta')";
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
+            header('location:../candidatura/confirmar_candidatura.php?candidatoID=' . $id_pergunta . '');
+        } else {
+            die(mysqli_error($conn));
+        }
+    }
+    if (isset($_POST['adicionar'])) { //Se $_POST['submit'] significa que o formulário foi submetido
+        $pergunta = $_POST['pergunta'];;
+        $sql = "insert into `perguntas`  (id_candidato,pergunta) values('$id_pergunta','$pergunta')";
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
+            header('location:../perguntas/perguntas.php?PerguntaID=' . $id_pergunta . '');
+        } else {
+            die(mysqli_error($conn));
+        }
+    }
+}
