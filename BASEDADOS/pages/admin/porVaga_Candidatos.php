@@ -29,8 +29,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     $candidato_vaga_id = $row['candidato_vaga_id'];
     $id_candidato = $row['id_candidato'];
     $id_vaga = $row['id_vaga'];
-   
-    
 }
   
 echo '<a href="../home.php"  class="btn btn-primary">FINALIZAR</a>';
