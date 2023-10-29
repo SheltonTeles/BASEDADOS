@@ -7,6 +7,36 @@
 
 }
 
+
+/* NavBAr start */
+.nav{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1;
+}
+
+.nav > li{
+    border: 1px solid wheat;
+    margin-left: 1rem;
+    background-color: rgba(0, 0, 0, .1);
+    
+}
+
+.nav > li:hover{
+    background-color: #695D45;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.nav > li a{
+    padding: 1rem;
+    color: black;
+    text-transform: uppercase;
+    font-size: .75rem;
+    text-decoration: none;
+}
+/* NavBar End */
+
 /* Body end */
 
 
@@ -14,7 +44,8 @@
 .cards-container{
     margin: 1rem 0;
     background-color: white;
-    padding: .75rem;
+    padding: .75rem 1.25rem;
+
 }
 
 
@@ -23,9 +54,30 @@
     padding: .75rem;
     margin:0 ;
     background-color: #eee;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 18px;
+    
     margin-bottom: .5rem;
+}
+
+.cards-container .card{
+    border-radius: 0;
+    border: none;
+}
+
+.cards-container .card-body{
+    background-color: rgba(70, 70, 70);
+    padding: 1rem .75rem; 
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .75rem;
+    color: white; 
+}
+
+.cards-container [class^=col]{
+    padding-left: .5rem;
+    padding-right: .5rem;
+
 }
 
 /* Section end */
@@ -47,19 +99,24 @@
     color: #695D45;
 }
 
-
-/* Jumbotron End */
-
-/* .jumbotron{
-
-    padding: 2rem 1rem;
+.jumbotron h1{
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, .4);
+    text-transform: uppercase;
+    font-weight: bold;
     margin-bottom: 2rem;
-    background-color: #e9ecef;
-    border-radius: .3rem;
+}
+
+.jumbotron p{
+    padding: 1rem;
+    border-bottom:2px solid black ;
+    /* background-color: rgba(0, 0, 0, .4); */
+    font-size: 1.5rem;
+    /* display: block; */
 
 }
 
- */
 
 
-/* Jumbotron end */
+
+
