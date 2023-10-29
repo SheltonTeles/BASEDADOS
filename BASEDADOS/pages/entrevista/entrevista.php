@@ -52,10 +52,19 @@ perguntas($id); //nome do metodo
 
                                         <input for="pergunta" name="pergunta" id="pergunta" type="datetime-local" class="form-control m-3" placeholder="Campo de data" aria-label="Jobs" aria-describedby="basic-addon1">
 
+                                        <input for="pergunta" name="pergunta" id="pergunta" type="text" class="form-control m-3" placeholder="Pergunta" aria-label="Jobs" aria-describedby="basic-addon1">
+
+                                        <input for="pergunta" name="pergunta" id="pergunta" type="text" class="form-control m-3" placeholder="Avaliação" aria-label="Jobs" aria-describedby="basic-addon1">
+
 
 
                                     </div>
                                     <textarea class="form-control m-4 mx-auto" rows="5" id="comment" placeholder="Insira alguma nota"></textarea>
+                                </div>
+
+
+                                <div>
+
                                 </div>
 
                                 <div type="adicionar" name="adicionar" class="d-grid gap-2 col-6 mx-auto">
