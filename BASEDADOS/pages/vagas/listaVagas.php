@@ -1,6 +1,51 @@
 <?php
 require '../../db/database.php';
 ?>
+    
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="listaVagas.css">
+    <style>
+
+        ul {
+            list-style: none;
+        }
+
+        .list-group {
+        list-style: none;
+        padding: 0;
+        }
+
+        .list-group li {
+            margin-bottom: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .list-group li:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .list-group li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .list-group hr {
+            border: 5px solid #ddd;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
     <ul class="list-group">
         <?php
         global $conn;
@@ -25,3 +70,6 @@ require '../../db/database.php';
 
         ?>
     </ul>
+
+</body>
+</html>

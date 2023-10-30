@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    justify-items: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    padding: 2rem 1rem;
+    max-width: 400px;
+    border: 2px solid #000;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-control {
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+.btn {
+    padding: 0.8rem;
+    font-weight: 600;
+    background: #a8f;
+    color: #fff;
+    border-radius: 1rem;
+    border: 2px solid #000;
+
+}
