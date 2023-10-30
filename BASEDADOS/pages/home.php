@@ -30,7 +30,7 @@ require '../db/database.php';
             <li>'.$data_termino.'</li>
             <li>'.$sector_vaga.'</li>
             <li>'.$visualizacoes.'</li>
-            <li><a href="../pages/candidatura/candidatura.php?vagaID=' . $id_vaga . '"  class="btn btn-primary">CANDIDATAR-SE</li>
+            <li><a href="../pages/candidatura/candidatura.php?vagaID=' . $id_vaga . '"  class="btn btn-primary">CANDIDATAR-SE</a></li>
             
             <hr>
             ';

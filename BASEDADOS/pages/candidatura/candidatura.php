@@ -1,9 +1,9 @@
 <?php
 require '../../db/database.php';
-if(isset($_GET['vagaID'])){
+if (isset($_GET['vagaID'])) {
     $id = $_GET['vagaID'];
 }
-echo ''.$id.'';
+echo '' . $id . '';
 candidatar($id)
 ?>
 <!DOCTYPE html>
@@ -59,26 +59,75 @@ candidatar($id)
             <div class="input-group mb-3">
                 <span class="mais">Mais Sobre Ti:</span>
                 <textarea for="mais_sobre" name="mais_sobre" id="mais_sobre" type="text" class="form-control" placeholder="Mais sobre Ti" aria-label="Jobs" aria-describedby="basic-addon1">
+<<<<<<< HEAD
                 </textarea>
                 <!-- <hr>
                 <h2>Formação</h2>
 
                 <hr>
+=======
+</textarea>
+                <hr>
+                
+                
+>>>>>>> origin/SheltonTeles
                 <h2>Experiência</h2>
 
                 <hr>
                 <h2>Línguas</h2>
+<<<<<<< HEAD
                 
                 <hr> -->
+=======
+
+                <hr>
+>>>>>>> origin/SheltonTeles
             </div>
 
+            <!-- <li><a href="../pages/candidatura/candidatura.php?candi=' . $id_vaga . '"  class="btn btn-primary">CANDIDATAR-SE</a></li> -->
+            
 
-
-            <button type="submit" name="submit" class="btn btn-success btn-lg">CANDIDATAR-SE</button>
+            <!-- <button type="submit" name="submit" class="btn btn-success btn-lg">Formação -></button> -->
+            <button type="submit" name="submit" class="btn btn-success btn-lg">Formação-></button>
 
         </form>
 
     </div>
 </body>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function() {
+        $(".add_item_btn").click(function(e) {
+            e.preventDefault();
+            $("#formacao").prepend(` 
+            <div id="row">
+                    <div class="input-group mb-3">
+                        <input for="nome_instituicao" name="nome_instituicao[]" id="nome_instituicao" type="text" class="form-control" placeholder="Nome da instituição" aria-label="Jobs" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input for="nome_instituicao" name="nivel_academico[]" id="nome_instituicao" type="text" class="form-control" placeholder="Nível academicmo" aria-label="Jobs" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        inicio
+                        <input for="data_inicio" name="data_inicio[]" id="data_inicio" type="date" class="form-control" placeholder="" aria-label="Jobs" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        termini
+                        <input for="data_termino" name="data_termino[]" id="data_termino" type="date" class="form-control" placeholder="" aria-label="Jobs" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <button type="button" class="remove_item_btn">Remover</button>
+                    </div>
+                </div>
+                `)
+        })
+        $(document).on('click','.remove_item_btn',function(e){
+            e.preventDefault();
+            let row_item=$(this).parent().parent();
+            $(row_item).remove();
+        });
+
+    })
+</script> -->
 
 </html>
